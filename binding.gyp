@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "myaddon",
-      "sources": [ "myaddon.cc" ],
+      "sources": [ "fn_with_return_fucntion.cc" ],
       "include_dirs": [  "<!(node -e \"require('nan')\")"]
     }
   ]
