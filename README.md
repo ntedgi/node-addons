@@ -5,56 +5,10 @@ basic example
 * return value from V8
 * GC handling
 
-fn_string_handle.cc
-`
-const bindings = require('bindings')
-const addon = bindings('myaddon')
-addons.print(":-)")
-logging this line in C++
-`
+fn_string_handle.cc `logging this line in C++`
 
-fn_with_return_fucntion
-`
-const bindings = require('bindings')
-const addon = bindings('myaddon')
-const len = addons.print("str")
-return len of utf8 from C++
-`
+fn_with_return_fucntion `return len of utf8 from C++`
 
-v8_timeout_with_cb.cc
-`
-const bindings = require('bindings')
-const addon = bindings('myaddon')
-addon.delay(5000, () => {
-    console.log('hello world')
-})
-block js at C++ side 
-`
+v8_timeout_with_cb.cc `block js at C++ side `
 
-v8_timeout_js_non_blocking.cc
-`
-const bindings = require('bindings')
-const addon = bindings('myaddon')
-addon.delay(5000, () => {
-    console.log('hello world')
-})
-non blockin js new thread runing at C++ side 
-`
-
-v8_timeout_js_non_blocking
-
-`
-const addon = require('bindings')('myaddon')
-
-const interval = setInterval(function () {
-  process.stdout.write('.')
-}, 50)
-
-addon.delay(process.argv[2], function () {
-  clearInterval(interval)
-  console.log('Done!')
-})
-
-process.stdout.write('Waiting')
-
-`
+v8_async_worker.cc `non blockin js new thread runing at C++ side `
