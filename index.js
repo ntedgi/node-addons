@@ -1,6 +1,5 @@
-var bindings = require('bindings')
-var addon = bindings('myaddon')
-
-const str = process.argv[2]
-const res = addon.length(str)
-console.log(res)
+const bindings = require('bindings')
+const addon = bindings('myaddon')
+addon.delay(5000, () => {
+    console.log('hello world')
+})

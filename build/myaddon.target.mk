@@ -112,7 +112,7 @@ INCS_Release := \
 	-I$(srcdir)/node_modules/nan
 
 OBJS := \
-	$(obj).target/$(TARGET)/fn_with_return_fucntion.o
+	$(obj).target/$(TARGET)/v8_timeout_with_cb.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)

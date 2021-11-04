@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "myaddon",
-      "sources": [ "fn_with_return_fucntion.cc" ],
+      "sources": [ "v8_timeout_with_cb.cc" ],
       "include_dirs": [  "<!(node -e \"require('nan')\")"]
     }
   ]
